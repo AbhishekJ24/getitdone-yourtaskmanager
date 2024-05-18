@@ -27,11 +27,15 @@ To build the app in production, run:
 npm run build
 ```
 
-Acknowledgements
+### How to Use
+
+- Add a Task: Type your task in the input field and click the "Add Task" button.
+- Edit a Task: Click the "Edit" button next to the task. This will move the task to the input field where you can edit it. After editing, click the "Add Task" button to save the changes.
+- Complete a Task: Check the checkbox next to the task to mark it as completed. Uncheck it to mark it as not completed.
+- Delete a Task: Click the "Delete" button next to the task to delete it.
+
+### Acknowledgements
 
 - React
 - Vite
 - uuid
-
-
-Feel free to modify this `README.md` according to your project's specific details and requirements.
