@@ -1,6 +1,6 @@
 # GetItDone - Your Task Manager
 
-![Uploading Screenshot 2024-05-19 at 12.47.56 AM.png…]()
+<img width="1680" alt="Screenshot 2024-05-19 at 12 47 56 AM" src="https://github.com/AbhishekJ24/getitdone-yourtaskmanager/assets/90437046/194eecb5-0f0e-4b4c-80e6-619250021fc7">
 
 This is a simple ToDo list application built with React. It allows you to add, edit, complete, and delete tasks.
 
