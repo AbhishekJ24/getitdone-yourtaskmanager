@@ -11,6 +11,7 @@ function App() {
   const [tasks, setTasks] = useState([])
 
   const handleAdd = () => {
+    if(task !== "")
     setTasks([...tasks, { id: uuidv4(), task, isCompleted: false }])
     setTask("")
   }
@@ -22,7 +23,7 @@ function App() {
     })
     let newTasks = [...tasks]
     newTasks[index].isCompleted = !newTasks[index].isCompleted
-    setTasks[newTasks]
+    setTasks(newTasks)
   }
 
   const handleEdit = () => {
@@ -34,7 +35,7 @@ function App() {
     let newTasks = tasks.filter(item=>{
       return item.id !== id
     })
-    setTasks[newTasks]
+    setTasks(newTasks)
   }
 
   const handleChange = (e) => {
