@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { React, useState, useEffect } from 'react'
+import { React, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -13,8 +13,11 @@ function App() {
   // STATE TO HOLD THE COLLECTION OF TASKS
   const [tasks, setTasks] = useState([])
 
+  const [savebtn, setSavebtn] = useState("Add Task")
+
   // A FUNCTION TO HANDLE ADDITION OF A NEW TASK
   const handleAdd = () => {
+    setSavebtn("Add Task")
     if (task !== "")
       setTasks([...tasks, { id: uuidv4(), task, isCompleted: false }])
     setTask("")
@@ -33,6 +36,7 @@ function App() {
 
   // FUNCTION TO HANDLE EDIT TASKS FEATURES, THIS MOVE THE THE TASK IN CONTEXT TO THE INPUT BAR FOLLOWED BY REMOVING IT FROM THE LIST
   const handleEdit = (e, id) => {
+    setSavebtn("Update Task")
     let t = tasks.filter(item => item.id === id)
     setTask(t[0].task)
     let newTasks = tasks.filter(item => {
@@ -71,7 +75,7 @@ function App() {
         {/* THIS IS THE TASK ADDING DIV FOR THE TASK MANAGER */}
         <div className='flex gap-5 items-center justify-center mb-10'>
           <input onChange={handleChange} value={task} className='py-2 px-4 w-3/4 rounded-xl focus:outline-none' type="text" placeholder='Your Task' />
-          <button onClick={handleAdd} className='bg-violet-950 text-violet-50 hover:bg-violet-900 p-2 rounded-lg text-sm'>Add Task</button>
+          <button onClick={handleAdd} className='bg-violet-950 text-violet-50 hover:bg-violet-900 p-2 rounded-lg text-sm'>{savebtn}</button>
         </div>
 
         {/* HERE COMES THE TASKS OR TODOS */}
